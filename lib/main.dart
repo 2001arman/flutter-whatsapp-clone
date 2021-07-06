@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:whatsapp_clone/Screen/Status/status_box.dart';
+
 import 'package:whatsapp_clone/Screen/chat/chat_screen.dart';
+import 'package:whatsapp_clone/Screen/panggilan/call_box.dart';
+import 'package:whatsapp_clone/Screen/panggilan/call_screen.dart';
 import 'package:whatsapp_clone/widgets/my_app_bar.dart';
 
 void main() {
@@ -40,8 +43,8 @@ class MyHomePage extends StatelessWidget {
             children: [
               Center(child: Text("Camera")),
               ChatScreen(),
-              Center(child: Text("Status")),
-              Center(child: Text("Panggilan")),
+              StatusBox(),
+              CallScreen(),
             ],
           ),
         ),
