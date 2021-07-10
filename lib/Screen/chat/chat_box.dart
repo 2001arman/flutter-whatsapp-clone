@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/Screen/chat/chat_screen/isi_chat.dart';
+import 'package:whatsapp_clone/widgets/avatar_images.dart';
 
 class ChatBox extends StatelessWidget {
   final String nama, pesan, gambar;
@@ -12,24 +14,17 @@ class ChatBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (builder) => IsiChat()));
+      },
       child: Column(
         children: [
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Row(
               children: [
-                Container(
-                  width: 60,
-                  height: 60,
-                  margin: EdgeInsets.only(right: 20),
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("$gambar"),
-                    ),
-                    shape: BoxShape.circle,
-                  ),
-                ),
+                AvatarImages(gambar: gambar),
                 Expanded(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

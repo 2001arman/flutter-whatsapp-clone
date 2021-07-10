@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/Screen/chat/chat_box.dart';
 
+Map<String, String> nama = {
+  "arman": "arman",
+};
+
 class ChatScreen extends StatelessWidget {
   const ChatScreen({
     Key? key,
